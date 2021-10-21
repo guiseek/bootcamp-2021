@@ -80,11 +80,23 @@ A tag [ &lt;head&gt; ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 <base href="/recorder/">
 ```
 
-- [ ]  A tag [ &lt;link&gt; ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) é usada para linkar arquivos externos, geralmente CSS.
-- [ ]  Caso de uso
+- [x]  A tag [ &lt;link&gt; ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) é usada para linkar arquivos externos, geralmente CSS.
+- [x]  Caso de uso
 
 ```html
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  
+</body>
+</html>
 ```
 
 - [ ]  A tag [ &lt;meta&gt; ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta) define os metadados que não podem ser definidas usando outro elemento HTML.
@@ -147,29 +159,39 @@ A tag [ &lt;head&gt; ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 </body>
 ```
 
-- [ ]  A tag [ &lt;section&gt; ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section) define uma seção em um documento HTML.
-- [ ]  Caso de uso
+- [x]  A tag [ &lt;section&gt; ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section) define uma seção em um documento HTML.
+- [x]  Caso de uso
 
 ```html
+
 <section>
-    <fieldset>
-        <legend> Mentoria com Guilherme Luciane</legend>
-		</fieldset>
+<h1>Cabeçalho</h1>
+<p>Um monte de conteúdo incrível</p>
 </section>
+
 ```
 
 - [ ]  A tag [ &lt;nav&gt; ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav) define uma seção que contém apenas links de navegação.
 - [ ]  Caso de uso
 
 ```html
-
+<nav>
+  <ul>
+    <li><a href="#">Página inicial</a></li>
+    <li><a href="#">Sobre</a></li>
+    <li><a href="#">Contato</a></li>
+  </ul>
+</nav>
 ```
 
 - [ ]  A tag [ &lt;article&gt; ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article) define que pode existir de forma independente do resto do conteúdo. Esta tag poderia ser um post no fórum, um artigo de revista ou jornal, uma entrada de log da Web, um comentário enviado pelo usuário, ou qualquer outro item independente do conteúdo.
 - [ ]  Caso de uso
 
-```html
-
+```html˜
+<article>
+  <h4>Um artigo realmente impressionante</h4>
+  <p>Lotes de texto incrível.</p>
+</article>
 ```
 
 - [ ]  A tag [ &lt;aside&gt; ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside) define um conteúdo reservado do resto do conteúdo da página. Se for removida, o conteúdo restante ainda fazem sentido.
@@ -179,7 +201,7 @@ A tag [ &lt;head&gt; ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
 ```
 
-- [ ]  As tags [ &lt;h1&gt; ,<h2>,<h3>,<h4>,<h5>,<h6>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements) são elementos que representam os seis níveis de titulos de cabeçalhos dos documentos. Um elemento título descreve brevemente o tema da seção.
+- [ ]  As tags [ &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements) são elementos que representam os seis níveis de titulos de cabeçalhos dos documentos. Um elemento título descreve brevemente o tema da seção.
 - [ ]  Caso de uso
 
 ```html
