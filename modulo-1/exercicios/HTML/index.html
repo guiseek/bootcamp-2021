@@ -1,0 +1,731 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplos</title>
+  <style>
+    :root {
+      --color: rgb(29, 212, 111);
+      --muted: rgba(97, 148, 120, 0.2);
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      position: relative;
+      padding-bottom: 20px;
+      accent-color: var(--color);
+    }
+
+    ol li {
+      padding: 5px;
+      border-bottom: 1px solid var(--muted);
+    }
+    ol li::marker {
+      color: rgb(197, 197, 223);
+    }
+
+    label {
+      gap: 4px;
+      width: 150px;
+      align-items: center;
+      display: inline-flex;
+    }
+
+    input {
+      transform: scale(1.4);
+    }
+
+    code {
+      font-family: monospace;
+    }
+
+    output,
+    progress {
+      position: fixed;
+      z-index: 1;
+      bottom: 4px;
+    }
+
+    footer {
+      position: relative;
+      background-color: rgba(255,255,255, .5);
+    }
+
+    output {
+      color: var(--color);
+      right: 8px;
+    }
+
+    progress {
+      left: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Exercícios HTML</h1>
+  </header>
+  <main>
+    <form id="items">
+      <ol>
+        <li>
+          <label>
+            <input type="checkbox" name="title" />
+            title
+          </label>
+
+          <a href="title/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="base" />
+            base
+          </label>
+
+          <a href="base/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="link" />
+            link
+          </label>
+
+          <a href="link/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="meta" />
+            meta
+          </label>
+
+          <a href="meta/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="style" />
+            style
+          </label>
+
+          <a href="style/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="script" />
+            script
+          </label>
+
+          <a href="script/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="noscript" />
+            noscript
+          </label>
+
+          <a href="noscript/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="template" />
+            template
+          </label>
+
+          <a href="template/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="section" />
+            section
+          </label>
+
+          <a href="section/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="nav" />
+            nav
+          </label>
+
+          <a href="nav/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="article" />
+            article
+          </label>
+
+          <a href="article/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="aside" />
+            aside
+          </label>
+
+          <a href="aside/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="hgroup" />
+            hgroup
+          </label>
+
+          <a href="hgroup/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="header" />
+            header
+          </label>
+
+          <a href="header/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="footer" />
+            footer
+          </label>
+
+          <a href="footer/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="address" />
+            address
+          </label>
+
+          <a href="address/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="main" />
+            main
+          </label>
+
+          <a href="main/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="p" />
+            p
+          </label>
+
+          <a href="p/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="hr" />
+            hr
+          </label>
+
+          <a href="hr/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="pre" />
+            pre
+          </label>
+
+          <a href="pre/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="blockquote" />
+            blockquote
+          </label>
+
+          <a href="blockquote/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="ol" />
+            ol
+          </label>
+
+          <a href="ol/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="ul" />
+            ul
+          </label>
+
+          <a href="ul/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="li" />
+            li
+          </label>
+
+          <a href="li/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="dl" />
+            dl
+          </label>
+
+          <a href="dl/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="dt" />
+            dt
+          </label>
+
+          <a href="dt/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="dd" />
+            dd
+          </label>
+
+          <a href="dd/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="figure" />
+            figure
+          </label>
+
+          <a href="figure/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="figcaption" />
+            figcaption
+          </label>
+
+          <a href="figcaption/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="div" />
+            div
+          </label>
+
+          <a href="div/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="a" />
+            a
+          </label>
+
+          <a href="a/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="em" />
+            em
+          </label>
+
+          <a href="em/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="strong" />
+            strong
+          </label>
+
+          <a href="strong/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="abbr" />
+            abbr
+          </label>
+
+          <a href="abbr/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="time" />
+            time
+          </label>
+
+          <a href="time/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="code" />
+            code
+          </label>
+
+          <a href="code/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="var" />
+            var
+          </label>
+
+          <a href="var/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="samp" />
+            samp
+          </label>
+
+          <a href="samp/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="kbd" />
+            kbd
+          </label>
+
+          <a href="kbd/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="b" />
+            b
+          </label>
+
+          <a href="b/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="span" />
+            span
+          </label>
+
+          <a href="span/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="br" />
+            br
+          </label>
+
+          <a href="br/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="img" />
+            img
+          </label>
+
+          <a href="img/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="iframe" />
+            iframe
+          </label>
+
+          <a href="iframe/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="embed" />
+            embed
+          </label>
+
+          <a href="embed/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="video" />
+            video
+          </label>
+
+          <a href="video/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="audio" />
+            audio
+          </label>
+
+          <a href="audio/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="source" />
+            source
+          </label>
+
+          <a href="source/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="canvas" />
+            canvas
+          </label>
+
+          <a href="canvas/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="svg" />
+            svg
+          </label>
+
+          <a href="svg/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="math" />
+            math
+          </label>
+
+          <a href="math/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="table" />
+            table
+          </label>
+
+          <a href="table/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="tbody" />
+            tbody
+          </label>
+
+          <a href="tbody/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="thead" />
+            thead
+          </label>
+
+          <a href="thead/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="tfoot" />
+            tfoot
+          </label>
+
+          <a href="tfoot/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="tr" />
+            tr
+          </label>
+
+          <a href="tr/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="td" />
+            td
+          </label>
+
+          <a href="td/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="th" />
+            th
+          </label>
+
+          <a href="th/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="form" />
+            form
+          </label>
+
+          <a href="form/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="fieldset" />
+            fieldset
+          </label>
+
+          <a href="fieldset/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="legend" />
+            legend
+          </label>
+
+          <a href="legend/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="label" />
+            label
+          </label>
+
+          <a href="label/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="input" />
+            input
+          </label>
+
+          <a href="input/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="button" />
+            button
+          </label>
+
+          <a href="button/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="select" />
+            select
+          </label>
+
+          <a href="select/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="datalist" />
+            datalist
+          </label>
+
+          <a href="datalist/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="optgroup" />
+            optgroup
+          </label>
+
+          <a href="optgroup/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="option" />
+            option
+          </label>
+
+          <a href="option/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="textarea" />
+            textarea
+          </label>
+
+          <a href="textarea/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="output" />
+            output
+          </label>
+
+          <a href="output/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="progress" />
+            progress
+          </label>
+
+          <a href="progress/index.html"> <code> exemplo </code> </a>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="lt" />
+            meter
+          </label>
+
+          <a href="progress/index.html"><code>  exemplo </code> </a>
+        </li>
+      </ol>
+
+    </form>
+
+  </main>
+
+  <footer>
+    <p>Bootcamp 2021</p>
+
+    <output id="feedback"></output>
+    <progress id="quantity" max="100"></progress>
+
+  </footer>
+
+
+  <script>
+    const form = document.querySelector('form');
+    const output = document.querySelector('output');
+    const progress = document.querySelector('progress');
+    const items = document.querySelectorAll('li input');
+
+    const showChange = (name) => {
+      output.textContent = `${name} salvo`
+      setTimeout(() => {
+        output.textContent = ''
+      }, 3000)
+    }
+
+    function toString(value) {
+      return JSON.stringify(value);
+    }
+
+    function toJSON(value) {
+      return JSON.parse(value);
+    }
+
+    function readData() {
+      return localStorage.getItem('data') || '{}'
+    }
+
+    function writeData(data) {
+      localStorage.setItem('data', data);
+    }
+
+    function readValue() {
+      return toJSON(readData());
+    }
+
+    function writeValue(data) {
+      return writeData(toString(data));
+    }
+
+    function getFormValue() {
+      const data = new FormData(form)
+      return Object.fromEntries(data.entries())
+    }
+
+    function changeProgress(value) {
+      const total = items.length;
+      const done = Object.keys(value).length;
+
+      progress.value = (100 * done) / total;
+    }
+
+    const changeFn = ({ target }) => {
+      writeValue(getFormValue());
+
+      changeProgress(readValue());
+
+      showChange(target.name);
+    }
+
+    const value = readValue();
+
+    changeProgress(value);
+
+    items.forEach((item) => {
+      item.checked = !!value[item.name];
+      item.onchange = changeFn;
+    })
+  </script>
+</body>
+
+</html>
