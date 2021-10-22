@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <base href="/bootcamp-2021/">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="../../../custom/head-common.js"></script>
+  <head-common></head-common>
+  <title>Tipos de Input</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    fieldset section {
+      margin: 0 0 15px 0;
+    }
+
+    label {
+      display: inline-block;
+      width: 100px;
+    }
+
+    input {
+      width: 200px;
+    }
+
+    input[type="date"],
+    input[type="tel"],
+    input[type="url"] {
+      width: 200px;
+    }
+
+    input[type="color"] {
+      position: relative;
+      top: 7px;
+    }
+
+    input[type="color"],
+    input[type="search"] {
+      width: 208px;
+    }
+  </style>
+</head>
+
+<body>
+  <main id="container">
+
+    <fieldset>
+      <legend>Tipos de input</legend>
+
+      <section>
+        <label for="text">Text:</label>
+        <input type="text" id="text" />
+      </section>
+      <section>
+        <label for="email">Email:</label>
+        <input type="email" id="email" />
+      </section>
+      <section>
+        <label for="url">URL: </label>
+        <input type="url" id="url" />
+      </section>
+      <section>
+        <label for="date">Date: </label>
+        <input type="date" id="date" />
+      </section>
+      <section>
+        <label for="week">Week: </label>
+        <input type="week" id="week" />
+      </section>
+      <section>
+        <label for="month">Month: </label>
+        <input type="month" id="month" />
+      </section>
+      <section>
+        <label for="time">Time: </label>
+        <input type="time" id="time" />
+      </section>
+      <section>
+        <label for="datetime">Date/time: </label>
+        <input type="datetime" id="datetime" />
+      </section>
+      <section>
+        <label for="color">Colour: </label>
+        <input type="color" id="color" />
+      </section>
+      <section>
+        <label for="search">Search: </label>
+        <input type="search" id="search" />
+      </section>
+      <section>
+        <label for="number">Number: </label>
+        <input type="number" id="number" />
+      </section>
+
+    </fieldset>
+    <fieldset>
+      <legend>Avançado</legend>
+
+      <section>
+        <label for="tel">Telefone:</label>
+        <input type="tel" id="tel" />
+      </section>
+    </fieldset>
+
+    <pre class="language-html">
+      <code class="language-html">
+&lt;fieldset&gt;
+  &lt;legend&gt;Tipos de input&lt;/legend&gt;
+
+  &lt;section&gt;
+    &lt;label for="text"&gt;Text:&lt;/label&gt;
+    &lt;input type="text" id="text" /&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" /&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;label for="url"&gt;URL: &lt;/label&gt;
+    &lt;input type="url" id="url" /&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;label for="date"&gt;Date: &lt;/label&gt;
+    &lt;input type="date" id="date" /&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;label for="week"&gt;Week: &lt;/label&gt;
+    &lt;input type="week" id="week" /&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;label for="month"&gt;Month: &lt;/label&gt;
+    &lt;input type="month" id="month" /&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;label for="time"&gt;Time: &lt;/label&gt;
+    &lt;input type="time" id="time" /&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;label for="datetime"&gt;Date/time: &lt;/label&gt;
+    &lt;input type="datetime" id="datetime" /&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;label for="color"&gt;Colour: &lt;/label&gt;
+    &lt;input type="color" id="color" /&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;label for="search"&gt;Search: &lt;/label&gt;
+    &lt;input type="search" id="search" /&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;label for="number"&gt;Number: &lt;/label&gt;
+    &lt;input type="number" id="number" /&gt;
+  &lt;/section&gt;
+&lt;/fieldset&gt;
+      </code>
+    </pre>
+  </main>
+  <script>
+    const $input = document.querySelector('#tel')
+    $input.addEventListener('input', handleInput, false)
+
+    function handleInput(event) {
+      event.target.value = telMask(event.target.value)
+    }
+
+    function telMask(tel) {
+      return tel.replace(/\D/g, '')
+        .replace(/^(\d)/, '($1')
+        .replace(/^(\(\d{2})(\d)/, '$1) $2')
+        .replace(/(\d{5})(\d{1,4})/, '$1-$2')
+        .replace(/(-\d{4})\d+?$/, '$1');
+    }
+  </script>
+</body>
+
+</html>
