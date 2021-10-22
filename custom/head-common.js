@@ -1,7 +1,7 @@
 customElements.define('head-common',
   class extends HTMLElement {
     scripts = [
-      { src: '/third-party/prism/prism.min.js' }
+      { src: 'third-party/prism/prism.min.js' }
     ]
     links = [
       { rel: 'preconnect', href: 'https://fonts.googleapis.com ' },
