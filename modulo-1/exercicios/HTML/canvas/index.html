@@ -4,6 +4,16 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <canvas></canvas>  
+
+  <script>
+    var canvas = document.querySelector('canvas'); // em seu HTML esse elemento se parece com <canvas id="meuCanvas"></canvas>
+    console.log(canvas);
+    var ctx = canvas.getContext('2d');
+    console.log(ctx);
+
+    ctx.fillStyle = "rgb(200,0,0)"; // define a cor de preenchimento do retângulo
+    ctx.fillRect(10, 10, 55, 50);
+  </script>
 </body>
 </html>
