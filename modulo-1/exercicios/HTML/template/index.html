@@ -4,6 +4,20 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div></div>
+  <template>
+    <h1>Olá mundo</h1>
+  </template>
+
+  <script>
+    const container = document.querySelector('div')
+    console.log(container);
+    const template = document.querySelector('template')
+    console.log(template);
+
+    container.append(
+      template.content.cloneNode(true)
+    )
+  </script>
 </body>
 </html>

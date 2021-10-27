@@ -4,6 +4,78 @@
   <title>Document</title>
 </head>
 <body>
-  
+
+  <section style="display: flex;">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laelius clamores sofòw ille so lebat Edere compellans gumias ex ordine nostros. Duo Reges: constructio interrete. Certe, nisi voluptatem tanti aestimaretis. Videmus in quodam volucrium genere non nulla indicia pietatis, cognitionem, memoriam, in multis etiam desideria videmus. Cave putes quicquam esse verius. Eadem nunc mea adversum te oratio est. 
+    </p>
+    <pre>
+const form = document.querySelector('form');
+const output = document.querySelector('output');
+const progress = document.querySelector('progress');
+const items = document.querySelectorAll('li input');
+
+const showChange = (name) => {
+  output.textContent = `${name} salvo`
+  setTimeout(() => {
+    output.textContent = ''
+  }, 3000)
+}
+
+function toString(value) {
+  return JSON.stringify(value);
+}
+
+function toJSON(value) {
+  return JSON.parse(value);
+}
+
+function readData() {
+  return localStorage.getItem('data') || '{}'
+}
+
+function writeData(data) {
+  localStorage.setItem('data', data);
+}
+
+function readValue() {
+  return toJSON(readData());
+}
+
+function writeValue(data) {
+  return writeData(toString(data));
+}
+
+function getFormValue() {
+  const data = new FormData(form)
+  return Object.fromEntries(data.entries())
+}
+
+function changeProgress(value) {
+  const total = items.length;
+  const done = Object.keys(value).length;
+
+  progress.value = (100 * done) / total;
+}
+
+const changeFn = ({ target }) => {
+  writeValue(getFormValue());
+
+  changeProgress(readValue());
+
+  showChange(target.name);
+}
+
+const value = readValue();
+
+changeProgress(value);
+
+items.forEach((item) => {
+  item.checked = !!value[item.name];
+  item.onchange = changeFn;
+})
+    </pre>
+  </section>
+
 </body>
 </html>
