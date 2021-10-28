@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa filtrada</title>
+
+  <style>
+    .is-hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div>
+      <label for="searchbox">Busca</label>
+      <input type="search" id="searchbox" placeholder="Buscar...">
+    </div>
+
+    <ul>
+      <li>Adriano</li>
+      <li>Amandaki</li>
+      <li>Arnaldo</li>
+      <li>Avner</li>
+      <li>Bruno</li>
+      <li>Caroline</li>
+      <li>Daiane</li>
+      <li>David</li>
+      <li>Dayane</li>
+      <li>Dragon</li>
+      <li>Dravidus</li>
+      <li>EngWhashi</li>
+      <li>Estruture-se</li>
+      <li>Fer</li>
+      <li>Gabriela</li>
+      <li>Gianluca</li>
+      <li>Gobate</li>
+      <li>Gui</li>
+      <li>Hideki</li>
+      <li>Higo</li>
+      <li>Josiley</li>
+      <li>Karla</li>
+      <li>Leonardo</li>
+      <li>Ligia</li>
+      <li>Loop</li>
+      <li>Luandra</li>
+      <li>Luiz</li>
+      <li>Lu</li>
+      <li>Lígia</li>
+      <li>Marcelohr</li>
+      <li>Matheus</li>
+      <li>Michael</li>
+    </ul>
+  </section>
+
+  <script>
+    let names = document.querySelectorAll('li')
+
+    function search(name, term) {
+      return name.toLowerCase()
+        .includes(term.toLowerCase())
+    }
+
+    function liveSearch() {
+      let search_name = document.querySelector('#searchbox').value;
+
+      names.forEach((name) => {
+        if (search(name.textContent, search_name)) {
+          name.classList.remove('is-hidden');
+        } else {
+          name.classList.add('is-hidden');
+        }
+      })
+    }
+
+    // Pequeno atraso
+    let typingTimer;
+    let typeInterval = 300;
+    let searchInput = document.getElementById('searchbox');
+
+    searchInput.addEventListener('keyup', () => {
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(liveSearch, typeInterval);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,52 +1,46 @@
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
 </head>
+
 <body>
-  <math>
-    <mrow>
+  <div style="width: 15em;">
+    This mathematical formula with a big summation and the number pi
+    <math display="block" style="border: 1px dotted black;">
       <mrow>
-        <msup>
-          <mi>a</mi>
-          <mn>2</mn>
-        </msup>
-        <mo>+</mo>
-        <msup>
-          <mi>b</mi>
-          <mn>2</mn>
-        </msup>
-      </mrow>
-      <mo> = </mo>
-      <msup>
-        <mi>c</mi>
-        <mn>2</mn>
-      </msup>
-    </mrow>
-  </math>  
-
-
-  <math xmlns="http://www.w3.org/1998/Math/MathML">
-    <mrow>
-      <mrow>
-        <msup>
-          <mi>a</mi>
-          <mn>2</mn>
-        </msup>
-        <mo>+</mo>
-        <msup>
-          <mi>b</mi>
-          <mn>2</mn>
-        </msup>
+        <munderover>
+          <mo>∑</mo>
+          <mrow>
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow>
+            <mo>+</mo>
+            <mn>∞</mn>
+          </mrow>
+        </munderover>
+        <mfrac>
+          <mn>1</mn>
+          <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+          </msup>
+        </mfrac>
       </mrow>
       <mo>=</mo>
-      <msup>
-        <mi>c</mi>
-        <mn>2</mn>
-      </msup>
-    </mrow>
-  </math>
-
-  
+      <mfrac>
+        <msup>
+          <mi>π</mi>
+          <mn>2</mn>
+        </msup>
+        <mn>6</mn>
+      </mfrac>
+    </math>
+    is easy to prove.
+  </div>
 </body>
+
 </html>
