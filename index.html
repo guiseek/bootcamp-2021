@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <base href="/bootcamp-2021/">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,30 +12,60 @@
     body {
       font-family: 'Open Sans', sans-serif;
     }
+
+    li {
+      margin: 10px 0;
+    }
   </style>
 </head>
+
 <body>
   <h2>Exemplos</h2>
-  <ul>
-    <li>
-      <a href="modulo-1/exemplos/input-types">
-        exemplos / input-types
-      </a>
-    </li>
-    <li>
-      <a href="modulo-1/exemplos/orientation">
-        exemplos / orientation
-      </a>
-    </li>
-  </ul>
-  
+  <ol id="exemplos"> </ol>
+
   <h2>Exercícios</h2>
-  <ul>
+  <ol id="exercicios">
     <li>
       <a href="modulo-1/exercicios/HTML">
         exercícios / HTML
       </a>
     </li>
-  </ul>
+  </ol>
+
+  <template>
+    <li>
+      <a href=""></a>
+      <strong></strong>
+    </li>
+  </template>
+
+  <script>
+    const examples = [
+      { text: 'Tipos de Input', href: 'aleatorios/input-types', tags: ['HTML', 'JS'] },
+      { text: 'Sensor de orientação', href: 'aleatorios/orientation', tags: ['HTML', 'JS'] },
+      { text: 'Lista de contatos', href: 'CSS/lista-de-contatos', tags: ['CSS'] },
+      { text: 'Pesquisa Filtrada', href: 'JavaScript/pesquisa-filtrada', tags: ['JS'] }
+    ]
+
+    const template = document.querySelector('template');
+
+    function populate(list, items) {
+      items.forEach((item) => {
+        const clone = template.content.cloneNode(true);
+        const link = clone.querySelector('a');
+        const strong = clone.querySelector('strong');
+
+        link.href = `modulo-1/exemplos/${item.href}`;
+        link.textContent = item.text;
+        strong.textContent = item.tags.join(', ')
+        
+        list.append(clone);
+      })
+    }
+
+    populate(document.querySelector('#exemplos'), examples);
+
+  </script>
 </body>
+
 </html>
