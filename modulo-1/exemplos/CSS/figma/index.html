@@ -25,13 +25,32 @@
         <span>E-mail:</span>
         <input
           type="text"
+          name="email"
           placeholder="Ex.: nome@email.com"
         >
       </label>
+
+      <button>Enviar</button>
     </form>
   </main>
   <footer>
     <p>Bootcamp 2011</p>
   </footer>
+
+  <script>
+    const form = document.querySelector('form')
+
+    form.onsubmit = (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const value = Object.fromEntries(data.entries());
+      
+      if (!value.email.includes('@')) {
+        alert('Email inválido');
+      } else {
+        alert('Email VÁLIDO');
+      }
+    }
+  </script>
 </body>
 </html>
