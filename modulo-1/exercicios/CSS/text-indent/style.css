@@ -1,0 +1,15 @@
+p {
+  font-size: 14px;
+}
+#indentFirst p {
+  text-indent: 0;
+}
+#indentFirst p:first-child {
+  text-indent: 1.5em;
+}
+#indentAllButFirst p {
+  text-indent: 1.5em;
+}
+#indentAllButFirst p:first-child {
+  text-indent: 0;
+}
