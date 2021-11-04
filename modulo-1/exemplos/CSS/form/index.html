@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    label {
+      display: block;
+      opacity: .6;
+      transition: opacity 100ms linear;
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+    }
+
+    label:hover {
+      opacity: 1;
+    }
+
+    input {
+      transition: transform 500ms ease-in-out;
+    }
+    input:checked {
+      transform: scale(2);
+    }
+    
+    input:checked + output {
+      opacity: 0;
+    }
+
+    output {
+      transition: opacity 500ms cubic-bezier(.03,.99,1,-0.89);
+      display: block;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <form action="">
+    <label>
+      <span>Aceita os termos do site</span>
+      <input type="checkbox" >
+      <output>obrigatório</output>
+    </label>
+  </form>
+</body>
+</html>

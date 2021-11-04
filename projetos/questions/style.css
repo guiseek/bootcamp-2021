@@ -1,0 +1,185 @@
+@charset "UTF-8";
+.fancy label {
+  display: inline-flex;
+  align-items: baseline;
+}
+.fancy label input[type=checkbox],
+.fancy label input[type=radio] {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: inherit;
+  width: 1em;
+  margin: 0;
+  color: inherit;
+  outline: none;
+  font-family: "Font Awesome 5 Pro";
+  transition: 300ms ease-out;
+}
+.fancy label input[type=checkbox]::after,
+.fancy label input[type=radio]::after {
+  content: "";
+  display: inline-block;
+  text-align: center;
+  width: 1em;
+}
+.fancy label input[type=checkbox]:checked::after,
+.fancy label input[type=radio]:checked::after {
+  font-weight: 900;
+}
+.fancy label input[type=checkbox]:active,
+.fancy label input[type=radio]:active {
+  transform: scale(0.6);
+}
+.fancy label input[type=checkbox] + span,
+.fancy label input[type=radio] + span {
+  margin-left: 0.35em;
+}
+.fancy label input[type=checkbox]:checked::after {
+  content: "";
+}
+.fancy label input[type=radio]:checked::after {
+  content: "";
+}
+
+.fancy.square label input[type=checkbox]:after {
+  content: "";
+}
+.fancy.square label input[type=checkbox]:checked::after {
+  content: "";
+}
+
+/* demo layout – not relevant to the fanciness */
+:root {
+  --demo-width: 30;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-size: calc(1vmax + .5em);
+  line-height: 1.4;
+  font-family: sans-serif;
+  display: flex;
+}
+body main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 0em;
+}
+body main section {
+  flex: 1;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main section + section {
+  flex: none;
+  padding: 1em;
+  margin: 2em;
+  background: #1fc2f5;
+  color: #fff;
+  cursor: pointer;
+  transition: font-size 100ms ease-out;
+  border-radius: 0.5em;
+}
+
+.box {
+  position: relative;
+  width: calc(var(--demo-width) * 1%);
+  border: 1px dashed #ccc;
+  padding: 1em;
+  margin: -0.5em;
+  border-radius: 0.3em;
+}
+.box::after {
+  font-size: 0.8em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 1px dashed #ccc;
+  padding: 0 0.65em;
+  border-radius: 1em;
+  counter-reset: dw var(--demo-width);
+  content: counter(dw) "%";
+}
+
+h3 {
+  margin: 0 0 0.5em 0;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+hr {
+  border: 1px dashed #ccc;
+  height: 0;
+  margin: 1em 0;
+}
+
+.fancy label input[type=range] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  display: block;
+  padding: 0;
+  border: 0;
+  width: auto;
+  height: 0.25em;
+  border-radius: 1em;
+  cursor: pointer;
+  font-size: inherit;
+}
+.fancy label input[type=range]::-moz-range-track {
+  -moz-appearance: none;
+       appearance: none;
+  background: #fff;
+  outline: none;
+}
+.fancy label input[type=range]::-moz-focus-outer {
+  border: 0;
+}
+.fancy label input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+       appearance: none;
+  width: 1em;
+  height: 1em;
+  border: none;
+  box-shadow: 0 0 0 0.2em #1fc2f5;
+  border-radius: 1em;
+  background: #fff;
+  transform: scale(0.7);
+  -moz-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.fancy label input[type=range]::-moz-range-thumb:focus, .fancy label input[type=range]::-moz-range-thumb:active {
+  -moz-appearance: none;
+       appearance: none;
+  transform: scale(1.5);
+}
+.fancy label input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 1em;
+  height: 1em;
+  border: none;
+  box-shadow: 0 0 0 0.2em #1fc2f5;
+  border-radius: 1em;
+  background: #fff;
+  transform: scale(0.8);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.fancy label input[type=range]::-webkit-slider-thumb:focus, .fancy label input[type=range]::-webkit-slider-thumb:active {
+  -webkit-appearance: none;
+          appearance: none;
+  transform: scale(1.1);
+}
