@@ -31,7 +31,9 @@ label span {
   line-height: 100%;
 }
 
+button,
 input {
+  margin: 10px;
   width: 408px;
   height: 65px;
   font-size: 100%;
