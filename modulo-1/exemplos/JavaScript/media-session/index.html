@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    video {
+      background: #263238;
+      height: 198px;
+      width: 100%;
+    }
+    
+    button {
+      margin: 4px 0;
+    }
+    </style>
+</head>
+
+<body>
+  
+  <video playsinline autoplay muted></video>
+  <button id="openCameraButton">Abrir câmera</button>
+  <button id="togglePipButton">Alternar Picture-in-Picture</button>
+  
+  <script src="./video-conferencing.js"></script>
+  <script>
+    navigator.mediaSession = navigator.mediaSession || {};
+    navigator.mediaSession.setActionHandler = navigator.mediaSession.setActionHandler || function () { };
+    window.MediaMetadata = window.MediaMetadata || function () { };
+
+    const log = console.log
+  </script>
+</body>
+
+</html>

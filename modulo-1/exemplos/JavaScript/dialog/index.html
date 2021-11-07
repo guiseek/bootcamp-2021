@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>
+    Este botão abrirá um elemento de diálogo nativo:
+    <button id="show">Abrir caixa de dialogo</button>
+  </p>
+
+  <dialog>
+    <p>
+      Aqui está a caixa de diálogo com estilos padrão!
+    </p>
+    <p>Você pode modificar os estilos se desejar.</p>
+    <button id="close">Fechar</button>
+  </dialog>
+
+  <script>
+    const dialog = document.querySelector('dialog');
+    document.querySelector('#show').onclick = function () {
+      dialog.show();
+    };
+    document.querySelector('#close').onclick = function () {
+      dialog.close();
+    };
+  </script>
+</body>
+
+</html>

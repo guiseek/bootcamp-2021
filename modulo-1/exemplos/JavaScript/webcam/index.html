@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebCam</title>
+</head>
+
+<body>
+  <header>
+    <button>Abrir</button>
+  </header>
+
+  <main>
+    <video autoplay playsinline></video>
+  </main>
+
+  <output></output>
+
+  <script>
+    // Aguarda o conteúdo da página ser carregado
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Seleciona o botão, vinculando um evento de clique
+      document.querySelector('button').onclick = (e) => {
+
+        // Configura o necessário pra uso da câmera
+        const config = { audio: false, video: true }
+
+        // Solicita permissão de uso da câmera, então temos um fluxo
+        navigator.mediaDevices.getUserMedia(config).then(stream => {
+          // Coloca o fluxo recebido ao elemento video no HTML
+          document.querySelector('video').srcObject = stream
+        }).catch(error => {
+          // Caso contrário, a mensagem do erro vai ao elemento output
+          document.querySelector('output').textContent = error.message
+        })
+      }
+    })
+  </script>
+</body>
+
+</html>

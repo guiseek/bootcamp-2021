@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    video {
+      background: #1e2327;
+      border-radius: 4px;
+      width: 100%;
+      height: 360px;
+    }
+  </style>
+</head>
+
+<body>
+  <video controls autopictureinpicture></video>
+  <script>
+    console.log(('pictureInPictureEnabled' in document))
+    const video = document.querySelector('video')
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        video.srcObject = stream;
+        return video.play();
+
+        // User can now show/hide window and video will enter and exit
+        // automatically Picture-in-Picture when the document's visibility
+        // changes.
+      });
+    video.addEventListener('enterpictureinpicture', function (event) {
+      log('> Video entered Picture-in-Picture');
+    });
+
+    video.addEventListener('leavepictureinpicture', function (event) {
+      log('> Video left Picture-in-Picture');
+    });
+
+  </script>
+</body>
+
+</html>

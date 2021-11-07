@@ -44,8 +44,16 @@
       { text: 'Tipos de Input', href: 'aleatorios/input-types', tags: ['HTML', 'JS'] },
       { text: 'Sensor de orientação', href: 'aleatorios/orientation', tags: ['HTML', 'JS'] },
       { text: 'Lista de contatos', href: 'CSS/lista-de-contatos', tags: ['CSS'] },
-      { text: 'Pesquisa Filtrada', href: 'JavaScript/pesquisa-filtrada', tags: ['JS'] }
+      { text: 'Pesquisa Filtrada', href: 'JavaScript/pesquisa-filtrada', tags: ['JS'] },
+      { text: 'Dialog', href: 'JavaScript/dialog', tags: ['HTML', 'JS'] },
+      { text: 'Media Session', href: 'JavaScript/media-session', tags: ['HTML', 'JS'] },
+      { text: 'Picture in picture', href: 'JavaScript/picture-in-picture', tags: ['HTML', 'JS'] },
+      { text: 'Radar de velocidade', href: 'JavaScript/radar-de-velocidade', tags: ['HTML', 'JS'] },
+      { text: 'Gravar vídeo', href: 'JavaScript/recording', tags: ['HTML', 'JS'] },
+      { text: 'Processamento de vídeo', href: 'JavaScript/video-processing', tags: ['HTML', 'JS'] },
+
     ]
+
 
     const template = document.querySelector('template');
 
@@ -58,7 +66,7 @@
         link.href = `modulo-1/exemplos/${item.href}`;
         link.textContent = item.text;
         strong.textContent = item.tags.join(', ')
-        
+
         list.append(clone);
       })
     }
