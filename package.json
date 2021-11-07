@@ -4,6 +4,8 @@
   "description": "## Exemplos 1. [Sensores de orientação](modulo-1/exemplos/orientation/index.html)",
   "main": "index.js",
   "scripts": {
+    "exemplos": "http-server modulo-1/exemplos -o",
+    "exercicios": "http-server modulo-1/exercicios -o",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/guiseek/bootcamp-2021/issues"
   },
-  "homepage": "https://github.com/guiseek/bootcamp-2021#readme"
+  "homepage": "https://github.com/guiseek/bootcamp-2021#readme",
+  "devDependencies": {
+    "http-server": "^14.0.0"
+  }
 }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <span id="outputVideoContainer"></span>
+
+    <div class="box">
+      <span>Origem:</span>
+      <select id="sourceSelector" disabled>
+        <option selected value="">parado</option>
+        <option value="camera">Câmera</option>
+        <option value="video">Vídeo</option>
+        <option value="canvas">Canvas</option>
+        <option value="pc">Ponta de conexão (da câmera)</option>
+      </select>
+      <span>Adicionar a página: <input type="checkbox" id="sourceVisible" disabled></span>
+    </div>
+    <div class="box">
+      <span>Transformador:</span>
+      <select id="transformSelector" disabled>
+        <option selected value="webgl">WebGL</option>
+        <option value="canvas2d">Canvas2D</option>
+        <option value="noop">Não faça nada</option>
+        <option value="drop">Soltar quadros aleatoriamente</option>
+        <option value="delay">Atrasar todos os quadros em 100 ms</option>
+        <option value="webcodec">Executar frames usando WebCodec</option>
+      </select>
+    </div>
+    <div class="box">
+      <span>Destino:</span>
+      <select id="sinkSelector" disabled>
+        <option selected value="video">Vídeo</option>
+        <option value="pc">Ponta de conexão</option>
+      </select>
+    </div>
+
+    <p>Visualize o console para ver o registro.</p>
+
+    <p>
+      <b>Nota</b>: Este exemplo está usando uma API experimental que ainda não foi padronizada. Desde 2020-11-16,
+      esta API está disponível no Chrome M88 se o código experimental estiver habilitado na linha de comando com
+      <code> --enable-blink-features=WebCodecs,MediaStreamInsertableStreams </code>.
+    </p>
+  </div>
+
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/camera-source.js" async></script>
+  <script src="js/canvas-source.js" async></script>
+  <script src="js/canvas-transform.js" async></script>
+  <script src="js/peer-connection-pipe.js" async></script>
+  <script src="js/peer-connection-sink.js" async></script>
+  <script src="js/peer-connection-source.js" async></script>
+  <script src="js/pipeline.js" async></script>
+  <script src="js/simple-transforms.js" async></script>
+  <script src="js/video-mirror-helper.js" async></script>
+  <script src="js/video-sink.js" async></script>
+  <script src="js/video-source.js" async></script>
+  <script src="js/webcodec-transform.js" async></script>
+  <script src="js/webgl-transform.js" async></script>
+  <script src="js/main.js" async></script>
+
+  <script src="../../../js/lib/ga.js"></script>
+</body>
+
+</html>
